@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hayat-e-Hafiz-e-Millat</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f2;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #075e3b;
+            color: white;
+            padding: 25px 10px;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        .content {
+            padding: 25px 15px;
+        }
+
+        button {
+            background-color: #075e3b;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #message {
+            color: #075e3b;
+            font-size: 18px;
+            margin-top: 20px;
+        }body {
+    background: #f5f8f3;
+    color: #173d2b;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: linear-gradient(135deg, #064e35, #128052);
+    color: white;
+    padding: 35px 15px;
+    border-bottom: 5px solid #d4af37;
+}
+
+header h1 {
+    font-size: 32px;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+button {
+    background: #08633f;
+    color: white;
+    border-radius: 25px;
+    padding: 13px 25px;
+    margin: 8px;
+    font-weight: bold;
+    border: 2px solid #08633f;
+}
+
+button:hover {
+    background: white;
+    color: #08633f;
+}
+
+iframe {
+    background: white;
+    border: 3px solid #08633f;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+/* Mobile screen design */
+body {
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 12px 18px;
+    margin: 6px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 75vh;
+    border: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>حیاتِ حافظِ ملت</h1>
+        <p>Hayat-e-Hafiz-e-Millat</p>
+    </header>
+
+    <div class="content">
+        <h2>حافظِ ملت کی سیرت</h2>
+
+        <p>
+            حافظِ ملت کی زندگی، تعلیمات اور خدمات کے مطالعے کے لیے خوش آمدید۔
+        </p>
+
+        <button onclick="startStudy()">مطالعہ شروع کریں</button>
+<br><br>
+
+<button onclick="showBiography()">حافظِ ملت کی سیرت</button>
+
+<br><br>
+
+<button onclick="showBook()">حیاتِ حافظِ ملت کتاب</button>
+
+<br><br>
+
+<button onclick="searchBook()">کتاب میں تلاش کریں</button>
+
+<div id="newContent"></div>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").innerText =
+                "حیاتِ حافظِ ملت ایپ میں خوش آمدید!";
+        }function startStudy() {
+    document.getElementById("newContent").innerHTML = `
+        <h2>مطالعہ شروع کریں</h2>
+        <h3>हाफ़िज़-ए-मिल्लत की किताब पढ़ें</h3>
+        <p>नीचे दिए गए बटन से किताब पढ़ना शुरू करें।</p>
+        <button onclick="showBook()">किताब खोलें</button>
+    `;
+}
+       function showBiography() {
+    document.getElementById("newContent").innerHTML = `
+        <h2>حافظِ ملت کی سیرت</h2>
+        <h3>हाफ़िज़-ए-मिल्लत की सीरत</h3>
+
+        <button onclick="showintro()">परिचय</button>
+        <button>जन्म और परिवार</button>
+        <button>शिक्षा और प्रशिक्षण</button>
+        <button>इल्मी और दीनी सेवाएँ</button>
+        <button>अख़लाक़ और किरदार</button>
+        <button>विसाल</button>
+    `;
+}
+function showIntro() {
+    document.getElementById("newContent").innerHTML = `
+        <h2>حافظِ ملت حضرت علامہ شاہ عبدالعزیز محدث مرادآبادی علیہ الرحمہ</h2>
+
+        <h3>हाफ़िज़-ए-मिल्लत का परिचय</h3>
+
+        <p>
+        हज़रत अल्लामा शाह अब्दुल अज़ीज़ मुहद्दिस मुरादाबादी
+        रहमतुल्लाह अलैह को हाफ़िज़-ए-मिल्लत के नाम से जाना जाता है।
+        आपका जन्म 1894 ईस्वी में भोजपुर, ज़िला मुरादाबाद,
+        उत्तर प्रदेश में हुआ था।
+        </p>
+
+        <p>
+        आपने अपने पिता से पवित्र क़ुरआन हिफ़्ज़ किया और
+        आगे की दीनी शिक्षा जामिया नईमिया मुरादाबाद तथा
+        मदरसा मुईनिया अजमेर शरीफ़ में प्राप्त की।
+        आपने अपने शिक्षक सदरुश्शरीआ हज़रत अल्लामा
+        अमजद अली आज़मी रहमतुल्लाह अलैह से भी शिक्षा प्राप्त की।
+        </p>
+
+        <p>
+        14 जनवरी 1934 को आप मुबारकपुर पहुँचे और
+        मदरसा अशरफ़िया मिस्बाहुल उलूम की शैक्षणिक
+        ज़िम्मेदारी सँभाली। आपकी मेहनत और लगन से
+        यह संस्था शिक्षा और ज्ञान का प्रसिद्ध केंद्र बनी।
+        </p>
+
+        <p>
+        हाफ़िज़-ए-मिल्लत की ज़िंदगी इल्म, दीन की सेवा,
+        मेहनत और समर्पण का एक महत्वपूर्ण उदाहरण है।
+        </p>
+    `;
+}
+     function showBook() {
+    document.getElementById("newContent").innerHTML = `
+        <h2>حیاتِ حافظِ ملت</h2>
+
+        <div>
+            <button onclick="previousPage()">⬅️ पिछला पन्ना</button>
+
+            <input type="number"
+                   id="pageNumber"
+                   value="1"
+                   min="1"
+                   max="474"
+                   style="width:70px; padding:10px;">
+
+            <button onclick="goToPage()">जाएँ</button>
+
+            <button onclick="nextPage()">अगला पन्ना ➡️</button>
+        </div>
+
+        <p>कुल पन्ने: 474</p>
+
+        <iframe
+            id="bookFrame"
+            src="./Hayat%20e%20Hafiz%20e%20Millat%20%201.pdf#page=1"
+            width="100%"
+            height="650">
+        </iframe>
+    `;
+}
+    document.getElementById("newContent").innerHTML = `
+        <h2>حیاتِ حافظِ ملت</h2>
+
+        <iframe
+            src="./Hayat%20e%20Hafiz%20e%20Millat%20%201.pdf"
+            width="100%"
+            height="650"
+            style="border: 2px solid #075e3b; border-radius: 10px;">
+        </iframe>
+    `;
+
+
+        function searchBook() {
+            document.getElementById("newContent").innerHTML =
+                "<h2>کتاب میں تلاش کریں</h2><input type='text' placeholder='لفظ لکھیں'><button>تلاش</button>";
+        } let currentPage = 1;
+
+function goToPage() {
+    let page = Number(document.getElementById("pageNumber").value);
+
+    if (page < 1 || page > 474 || !Number.isInteger(page)) {
+        alert("कृपया 1 से 474 के बीच पेज नंबर डालें।");
+        return;
+    }
+
+    currentPage = page;
+    updateBook();
+}
+
+function nextPage() {
+    if (currentPage < 474) {
+        currentPage++;
+        updateBook();
+    }
+}
+
+function previousPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        updateBook();
+    }
+}
+
+function updateBook() {
+    document.getElementById("pageNumber").value = currentPage;
+
+    document.getElementById("bookFrame").src =
+        "./Hayat%20e%20Hafiz%20e%20Millat%20%201.pdf#page=" + currentPage;
+}
+    </script>
+
+</body>
+</html>
